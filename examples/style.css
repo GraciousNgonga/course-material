@@ -1,0 +1,21 @@
+p { 
+    color: white; 
+    background: black 
+}
+
+.paragraph {
+    background: brown
+}
+
+#more-power {
+    background: rgb(132, 132, 209);
+}
+
+p { 
+    color: white; 
+    background: #1abc9c 
+}
+
+li a {
+    color: brown
+}
