@@ -1,14 +1,11 @@
 
-
-
-
-
-
-
-
-
-
-
-
-// functionality has been removed check pdf file by following step by step instructions
-// tonight, i am still preparing the pdf file.
+// clear users from storage
+const clearAll = () => {
+    // localStorage
+    var storage = window.localStorage.getItem('users');
+    // check if it exists, then assign users object to an empty array
+    // otherwise do nothing
+    if (storage !== undefined) {
+        window.localStorage.setItem('users', []);
+    }
+}

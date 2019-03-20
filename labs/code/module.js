@@ -1,12 +1,15 @@
 let ul = document.getElementById('list');
 
+// creating new element
 let li = document.createElement('li');
+// changing values of elements
 li.style.color = 'red'
 li.innerHTML = "John";
 li.setAttribute('id', 'john');
 
 let li1 = document.createElement('li');
 li1.innerHTML = "James";
+// adding events to elements
 li1.addEventListener('click', function() {
     li1.style.color = 'blue';
 })
@@ -28,6 +31,7 @@ const setListElement = (innerHTML) => {
     return career;
 }
 
+// AJAX calls
 const fetch = () => {
 
     let xhttp = new XMLHttpRequest();
@@ -77,16 +81,12 @@ const fetch = () => {
 
     }
 
-    // you can replace any link instead of the one given
-    // make sure you modify the functions that recieves data from the remote server
-    // instead of careers
+    // opening the connection
     xhttp.open('GET', `http://localhost:8000/api/careers`, true);
+    // sending the request
     xhttp.send();
 
 }
 
+// add new click event on the li2 list item
 li2.addEventListener('click', fetch);
-
-
-
-

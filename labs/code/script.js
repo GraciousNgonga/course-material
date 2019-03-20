@@ -185,3 +185,83 @@ let [n00, n01, n02, n03] = courses;
 console.log(n00);
 console.log(n01);
 
+
+// higher order function
+const CustomMath = (() => {
+    /**
+     * Here we have created a function that takes 
+     * some list of something and a function as argument. 
+     * It will go through the list and apply the provided function on each element, 
+     * storing the returned value from the function in results.
+     */
+    const perform = (callback, list) => {
+        let result = [];
+        for (let index = 0; index < list.length; index++) {
+            result.push(callback(list[index]))
+        }
+        return result;
+    };
+
+    // fibonacci
+    const fibonacci = (element) => element <= 1 ? 1 : fibonacci(element-1) + fibonacci(element-2);
+
+    // find the maximum of two numbers
+    const max = (val1, val2) => {
+        if(val1 !== 0 && val2 !== 0) {
+            if(val1 > val2) {
+                return val1;
+            } else if(val1 === val2) {
+                return 'equal';
+            } else {
+                return val2;
+            }
+        }
+    };
+
+    // factorial of a number
+    var factorial = function(number) {
+        if (number <= 0) { // terminal case
+            return 1;
+        } else { // block to execute
+            return (number * factorial(number - 1));
+        }
+    };
+
+    // min between two numbers
+    const min = (val1, val2)  => {
+        if (val1 < val2) {
+            return val1;
+        } else {
+            return val2;
+        }
+    };
+    
+    // console.log(min(23, 12))
+    
+    // take two numbers and perform addition on them
+    const addition = (a, b) => {
+        return a + b;
+    };
+    
+    // take two numbers and perform addition on them
+    const subtraction = (a, b) => {
+        return a - b;
+    };
+
+    // return new functions
+    return {
+        perform,
+        fibonacci,
+        max,
+        factorial,
+        min,
+        addition,
+        subtraction,
+    }
+
+})();
+
+console.log(CustomMath.addition(23, 34))
+console.log(CustomMath.factorial(4))
+console.log(CustomMath.max(34, 12))
+console.log(CustomMath.perform(CustomMath.fibonacci, [2,3,5,9,10]));
