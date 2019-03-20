@@ -11,4 +11,4 @@
 
 
 // functionality has been removed check pdf file by following step by step instructions
-// tonight
+// tonight, i am still preparing the pdf file.
