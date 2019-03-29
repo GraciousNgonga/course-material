@@ -1,43 +1,32 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Registration form</title>
+        <title>React</title>
         <!-- Include CSS File Here -->
         <link rel="stylesheet" href="form.css"/>
         <!-- Include JS File Here -->
-        <script src="form.js" type="text/javascript" lang="javascript"></script>
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
     </head>
 
     <body>
-        <div class="container">
-
-            <div class="section" style="width: 80%">
-                <div class="main">
-                    <h2>Registration Form</h2>
-                    <form action="#" method="post" name="form_name" id="form_id" class="form_class">
-                        <label>Name :</label>
-                        <input type="text" name="name" id="name" placeholder="Name" />
-                        <label>Email :</label>
-                        <input type="text" name="email" id="email" placeholder="Valid Email" />
-                        <input type="button" name="submit_id" id="btn_id" value="Register" onclick="register()"/>
-                    </form>
-                </div>
-            </div>
-
-            <div class="section" style="width: 80%; margin-top: 5%;">
-                <h2>
-                    Registered Users
-                    <span>
-                        <button onclick="loadAndListAllUsers()">List Users</button>
-                        <button onclick="clearAll()">Clear</button>
-                    </span>
-                </h2>
-                <ul id="list_of_users">
-                    <!--first item is not coming from the localStorage: note-->
-                    <li>John James</li>
-                </ul>
-            </div>
-
-        </div>
+        <div id='app'></div>
     </body>
+
+    <script>
+                
+            const MyComponent = () => {
+
+                return React.createElement(
+                    `li`,
+                    null, 
+                    `John Doe`
+                );
+
+            }
+
+            ReactDOM.render(React.createElement(MyComponent, null, null), document.getElementById('app'));
+
+    </script>
+
 </html>

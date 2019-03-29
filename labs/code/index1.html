@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration form</title>
+        <!-- Include CSS File Here -->
+        <link rel="stylesheet" href="form.css"/>
+        <!-- Include JS File Here -->
+        <script src="form.js" type="text/javascript" lang="javascript"></script>
+    </head>
+
+    <body>
+        <div class="container">
+
+            <div class="section" style="width: 80%">
+                <div class="main">
+                    <h2>Registration Form</h2>
+                    <form action="#" method="post" name="form_name" id="form_id" class="form_class">
+                        <label>Name :</label>
+                        <input type="text" name="name" id="name" placeholder="Name" />
+                        <label>Email :</label>
+                        <input type="text" name="email" id="email" placeholder="Valid Email" />
+                        <input type="button" name="submit_id" id="btn_id" value="Register" onclick="register()"/>
+                    </form>
+                </div>
+            </div>
+
+            <div class="section" style="width: 80%; margin-top: 5%;">
+                <h2>
+                    Registered Users
+                    <span>
+                        <button onclick="loadAndListAllUsers()">List Users</button>
+                        <button onclick="clearAll()">Clear</button>
+                    </span>
+                </h2>
+                <ul id="list_of_users">
+                    <!--first item is not coming from the localStorage: note-->
+                    <li>John James</li>
+                </ul>
+            </div>
+
+        </div>
+    </body>
+</html>
