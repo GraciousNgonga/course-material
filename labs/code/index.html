@@ -10,16 +10,16 @@
 
     <body>
         <div class="container">
-            
+
             <div class="section" style="width: 80%">
                 <div class="main">
                     <h2>Registration Form</h2>
                     <form action="#" method="post" name="form_name" id="form_id" class="form_class">
-                        <label>Name:</label>
+                        <label>Name :</label>
                         <input type="text" name="name" id="name" placeholder="Name" />
-                        <label>Email:</label>
+                        <label>Email :</label>
                         <input type="text" name="email" id="email" placeholder="Valid Email" />
-                        <input type="button" name="submit_id" id="btn_id" value="Register"/>
+                        <input type="button" name="submit_id" id="btn_id" value="Register" onclick="register()"/>
                     </form>
                 </div>
             </div>
@@ -28,13 +28,13 @@
                 <h2>
                     Registered Users
                     <span>
-                        <button value="List">List Users</button>
+                        <button onclick="loadAndListAllUsers()">List Users</button>
                         <button onclick="clearAll()">Clear</button>
                     </span>
                 </h2>
                 <ul id="list_of_users">
                     <!--first item is not coming from the localStorage: note-->
-                    <li>Isaac James</li>
+                    <li>John James</li>
                 </ul>
             </div>
 
