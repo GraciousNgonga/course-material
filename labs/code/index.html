@@ -10,22 +10,24 @@
     </head>
 
     <body>
-        <div id='app'></div>
+        <div id='app'>
+
+        </div>
     </body>
 
     <script>
                 
-            const MyComponent = () => {
+            const Person = ({ val }) => {
 
                 return React.createElement(
-                    `li`,
-                    null, 
-                    `John Doe`
-                );
+                    `div`,
+                    null,
+                    val
+                )
 
             }
 
-            ReactDOM.render(React.createElement(MyComponent, null, null), document.getElementById('app'));
+            ReactDOM.render(React.createElement(Person, null, { val: `JohnDoe` }), document.getElementById('app'));
 
     </script>
 
