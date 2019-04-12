@@ -1,8 +1,16 @@
 import React from 'react';
 
-const Person = ({ fname, lname }) => {
+import { Fname } from './fname';
+import { Lname } from './lname';
 
-    return <div style={{ textAlign: `center` }}>{ fname + ' ' + lname }</div>
+const Person = (props) => {
+
+    // const { fname, lname } = props;
+
+    return (<div style={{ textAlign: `center` }}>
+        <Lname { ...props } />
+        <Fname { ...props } />
+    </div>)
 
 }
 

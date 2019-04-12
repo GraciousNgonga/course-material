@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Person from './components/person.component';
+import Form from './components/form.component';
 
 class App extends Component {
 
@@ -13,6 +14,8 @@ class App extends Component {
         </header>
 
         <Person fname="John" lname="Doe"></Person>
+        <Person fname="Martin" lname="James"></Person>
+        <Form />
 
       </div>
     );
