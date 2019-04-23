@@ -1,11 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 export const Lname = (props) => {
 
     console.log(props);
         
-    return <input name="lname" onChange={ (e) => this.props.handleChange(e) } />
-
+    return (
+        <Fragment>
+            <input placeholder="Enter lname..." name="lname" onChange={ (e) => props.handleChange(e) } />
+            <div>{ props.lname }</div>
+        </Fragment>
+    )
 
 }
 
