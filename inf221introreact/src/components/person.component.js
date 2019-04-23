@@ -1,16 +1,29 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import { Fname } from './fname';
 import { Lname } from './lname';
 
-const Person = (props) => {
+class Person extends Component {
 
-    // const { fname, lname } = props;
+    state = {
+        fname: '',
+        lname: ''
+    }
 
-    return (<div style={{ textAlign: `center` }}>
-        <Lname { ...props } />
-        <Fname { ...props } />
-    </div>)
+    handleChange = (e) => {
+
+        this.setState({ [e.target.name]: e.target.value })
+
+    }
+
+    render() {
+
+        return (<div style={{ textAlign: `center` }}>
+                <Lname { ...this.props } { ...this.state } handleChange={ this.handleChange } />
+                <Fname { ...this.props } { ...this.state } handleChange={ this.handleChange } />
+            </div>);
+
+    }
 
 }
 

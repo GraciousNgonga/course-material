@@ -15,7 +15,8 @@ class App extends Component {
         </header>
 
         <Person fname="John" lname="Doe"></Person>
-        <Person fname="Martin" lname="James"></Person>
+        {/* <Person fname="Martin" lname="James"></Person> */}
+
         <Form />
         <UserInput />
 
